@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -14,7 +15,7 @@ const Container = styled.div`
 function Announcement() {
     return (
         <Container>
-            Super Deal! Free Shipping on Orders Over $50
+            Súper Descuento! Envio gratis en pedidos desde $50.000
         </Container>
     )
 }

@@ -9,6 +9,21 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+      // The name of the plugin
+      resolve: 'gatsby-source-mongodb',
+      options: {
+          // Name of the database and collection where are books reside
+          dbName: 'shop',
+          collection: 'products',
+          connectionString: 'mongodb://dani:mongoDBdani-207295@cluster0-shard-00-00.ea0r3.mongodb.net:27017,cluster0-shard-00-01.ea0r3.mongodb.net:27017,cluster0-shard-00-02.ea0r3.mongodb.net:27017/shop?ssl=true&replicaSet=atlas-8iegwc-shard-0&authSource=admin&retryWrites=true&w=majority',
+          extraParams: {
+            ssl: true,
+            authSource: 'admin',
+            retryWrites: true
+        }
+      }
+  },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
